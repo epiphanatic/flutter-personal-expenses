@@ -4,7 +4,7 @@ A Flutter demo app to record personal expenses and see trends in spending over t
 
 ## Demo
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/demo1-low.gif?alt=media&token=cf0d290a-fcf3-41df-99d4-8ec1fd18c704)
 
 ## Goolge Play Store
 
