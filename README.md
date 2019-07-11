@@ -1,6 +1,14 @@
 # flutter_personal_expenses_demo
 
-A new Flutter project.
+A Flutter demo app to record personal expenses and see trends in spending over time via a chart.
+
+## Dependencies
+
+You mush have flutter installed in order to start the site.
+
+See instructions [here](https://flutter.dev/docs/get-started/install) for your operating system.
+
+## Getting Started
 
 ## Getting Started
 
