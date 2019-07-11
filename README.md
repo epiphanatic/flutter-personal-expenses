@@ -8,7 +8,7 @@ A Flutter demo app to record personal expenses and see trends in spending over t
 
 ## Goolge Play Store
 
-You can download the app from the playstore [here]()
+You can download the app from the playstore [here](https://play.google.com/store/apps/details?id=com.amnion.flutter_personal_expenses_demo).
 
 ## Code Dependencies
 
