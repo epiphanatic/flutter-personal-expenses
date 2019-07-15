@@ -43,7 +43,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         // versionCode flutterVersionCode.toInteger()
-        versionCode 2 // for the moment, only way I can get this to work is update manually
+        versionCode 3 // for the moment, only way I can get this to work is update manually
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
