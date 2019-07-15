@@ -11,8 +11,6 @@ class TransactionList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isLandscape =
-        MediaQuery.of(context).orientation == Orientation.landscape;
     return Container(
       child: transactions.isEmpty
           ? LayoutBuilder(

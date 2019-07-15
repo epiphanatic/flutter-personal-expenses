@@ -47,35 +47,6 @@ class MyApp extends StatelessWidget {
             home: MyHomePage(),
           );
         });
-    // return MaterialApp(
-    //   title: 'Personal Expenses',
-    //   theme: ThemeData(
-    //       // difference between primarySwatch and primaryColor is former automatically creates
-    //       //   different shades, whereas latter will just default to other things.
-    //       primarySwatch: Colors.green,
-    //       accentColor: Colors.amber,
-    //       // errorColor: Colors.red,
-    //       brightness: Brightness.dark,
-    //       fontFamily: 'Quicksand',
-    //       textTheme: ThemeData.dark().textTheme.copyWith(
-    //             title: TextStyle(
-    //               fontFamily: 'OpenSans',
-    //               fontWeight: FontWeight.bold,
-    //               fontSize: 18,
-    //             ),
-    //             button: TextStyle(color: Colors.white),
-    //           ),
-    //       appBarTheme: AppBarTheme(
-    //         textTheme: ThemeData.light().textTheme.copyWith(
-    //               title: TextStyle(
-    //                 fontFamily: 'OpenSans',
-    //                 fontSize: 20,
-    //                 fontWeight: FontWeight.bold,
-    //               ),
-    //             ),
-    //       )),
-    //   home: MyHomePage(),
-    // );
   }
 }
 
@@ -102,8 +73,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // ),
   ];
 
-  //// theme funcs ////
-
   void toggleLightDarkTheme() {
     if (Theme.of(context).brightness == Brightness.dark) {
       DynamicTheme.of(context).setThemeData(ThemeData(
@@ -118,34 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           primarySwatch: Colors.green,
           accentColor: null));
     }
-    // DynamicTheme.of(context).setBrightness(
-    //     Theme.of(context).brightness == Brightness.dark
-    //         ? Brightness.light
-    //         : Brightness.dark);
-    // DynamicTheme.of(context).setThemeData(ThemeData(
-    //     brightness: Theme.of(context).brightness == Brightness.dark
-    //         ? Brightness.light
-    //         : Brightness.dark,
-    //     accentColor: Theme.of(context).accentColor == Colors.amber
-    //         ? null
-    //         : Colors.amber));
   }
-
-  // void changeBrightness() {
-  //   DynamicTheme.of(context).setBrightness(
-  //       Theme.of(context).brightness == Brightness.dark
-  //           ? Brightness.light
-  //           : Brightness.dark);
-  // }
-
-  // void changeColor() {
-  //   DynamicTheme.of(context).setThemeData(new ThemeData(
-  //       primaryColor: Theme.of(context).accentColor == Colors.indigo
-  //           ? Colors.red
-  //           : Colors.indigo));
-  // }
-
-  /// end theme funcs ////
 
   bool _showChart = false;
 
