@@ -26,7 +26,7 @@ class AdaptiveFlatButton extends StatelessWidget {
         : FlatButton(
             textColor: Theme.of(context).primaryColor,
             child: Text(
-              'Choose Date',
+              text,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
