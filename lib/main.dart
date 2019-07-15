@@ -205,8 +205,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Icon(CupertinoIcons.brightness_solid),
                   onTap: () => toggleLightDarkTheme(),
                 ),
+                Container(
+                  padding: EdgeInsets.only(right: 10),
+                ),
                 GestureDetector(
-                  child: Icon(CupertinoIcons.add),
+                  child: Icon(CupertinoIcons.add_circled_solid),
                   onTap: () => _startAddNewTransaction(context),
                 )
               ],
@@ -221,8 +224,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(Icons.brightness_4),
                 onPressed: () => toggleLightDarkTheme(),
               ),
+              Container(
+                padding: EdgeInsets.only(right: 8),
+              ),
               IconButton(
-                icon: Icon(Icons.add),
+                icon: Icon(Icons.add_circle),
                 onPressed: () => _startAddNewTransaction(context),
               ),
             ],
