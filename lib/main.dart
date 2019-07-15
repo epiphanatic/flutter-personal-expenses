@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './widgets/chart.dart';
@@ -11,34 +12,69 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Personal Expenses',
-      theme: ThemeData(
-          // difference between primarySwatch and primaryColor is former automatically creates
-          //   different shades, whereas latter will just default to other things.
-          primarySwatch: Colors.purple,
-          accentColor: Colors.amber,
-          // errorColor: Colors.red,
-          fontFamily: 'Quicksand',
-          textTheme: ThemeData.light().textTheme.copyWith(
-                title: TextStyle(
-                  fontFamily: 'OpenSans',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18,
-                ),
-                button: TextStyle(color: Colors.white),
-              ),
-          appBarTheme: AppBarTheme(
+    return DynamicTheme(
+        defaultBrightness: Brightness.light,
+        data: (brightness) => ThemeData(
+            // difference between primarySwatch and primaryColor is former automatically creates
+            //   different shades, whereas latter will just default to other things.
+            primaryColor: Colors.green,
+            accentColor: Colors.amber,
+            // errorColor: Colors.red,
+            brightness: brightness,
+            fontFamily: 'Quicksand',
             textTheme: ThemeData.light().textTheme.copyWith(
                   title: TextStyle(
                     fontFamily: 'OpenSans',
-                    fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    fontSize: 18,
                   ),
+                  button: TextStyle(color: Colors.white),
                 ),
-          )),
-      home: MyHomePage(),
-    );
+            appBarTheme: AppBarTheme(
+              textTheme: ThemeData.light().textTheme.copyWith(
+                    title: TextStyle(
+                      fontFamily: 'OpenSans',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+            )),
+        themedWidgetBuilder: (context, theme) {
+          return MaterialApp(
+            title: 'Personal Expenses',
+            theme: theme,
+            home: MyHomePage(),
+          );
+        });
+    // return MaterialApp(
+    //   title: 'Personal Expenses',
+    //   theme: ThemeData(
+    //       // difference between primarySwatch and primaryColor is former automatically creates
+    //       //   different shades, whereas latter will just default to other things.
+    //       primarySwatch: Colors.green,
+    //       accentColor: Colors.amber,
+    //       // errorColor: Colors.red,
+    //       brightness: Brightness.dark,
+    //       fontFamily: 'Quicksand',
+    //       textTheme: ThemeData.dark().textTheme.copyWith(
+    //             title: TextStyle(
+    //               fontFamily: 'OpenSans',
+    //               fontWeight: FontWeight.bold,
+    //               fontSize: 18,
+    //             ),
+    //             button: TextStyle(color: Colors.white),
+    //           ),
+    //       appBarTheme: AppBarTheme(
+    //         textTheme: ThemeData.light().textTheme.copyWith(
+    //               title: TextStyle(
+    //                 fontFamily: 'OpenSans',
+    //                 fontSize: 20,
+    //                 fontWeight: FontWeight.bold,
+    //               ),
+    //             ),
+    //       )),
+    //   home: MyHomePage(),
+    // );
   }
 }
 
@@ -64,6 +100,49 @@ class _MyHomePageState extends State<MyHomePage> {
     //   date: DateTime.now(),
     // ),
   ];
+
+  //// theme funcs ////
+
+  void toggleLightDarkTheme() {
+    if (Theme.of(context).brightness == Brightness.dark) {
+      DynamicTheme.of(context).setThemeData(ThemeData(
+          brightness: Brightness.light,
+          primaryColor: Colors.green,
+          accentColor: Colors.amber));
+    } else {
+      DynamicTheme.of(context).setThemeData(ThemeData(
+          brightness: Brightness.dark,
+          primaryColor: Colors.green,
+          accentColor: null));
+    }
+    // DynamicTheme.of(context).setBrightness(
+    //     Theme.of(context).brightness == Brightness.dark
+    //         ? Brightness.light
+    //         : Brightness.dark);
+    // DynamicTheme.of(context).setThemeData(ThemeData(
+    //     brightness: Theme.of(context).brightness == Brightness.dark
+    //         ? Brightness.light
+    //         : Brightness.dark,
+    //     accentColor: Theme.of(context).accentColor == Colors.amber
+    //         ? null
+    //         : Colors.amber));
+  }
+
+  // void changeBrightness() {
+  //   DynamicTheme.of(context).setBrightness(
+  //       Theme.of(context).brightness == Brightness.dark
+  //           ? Brightness.light
+  //           : Brightness.dark);
+  // }
+
+  // void changeColor() {
+  //   DynamicTheme.of(context).setThemeData(new ThemeData(
+  //       primaryColor: Theme.of(context).accentColor == Colors.indigo
+  //           ? Colors.red
+  //           : Colors.indigo));
+  // }
+
+  /// end theme funcs ////
 
   bool _showChart = false;
 
@@ -123,6 +202,10 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 GestureDetector(
+                  child: Icon(CupertinoIcons.brightness_solid),
+                  onTap: () => toggleLightDarkTheme(),
+                ),
+                GestureDetector(
                   child: Icon(CupertinoIcons.add),
                   onTap: () => _startAddNewTransaction(context),
                 )
@@ -134,6 +217,10 @@ class _MyHomePageState extends State<MyHomePage> {
               'Personal Expenses',
             ),
             actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.brightness_4),
+                onPressed: () => toggleLightDarkTheme(),
+              ),
               IconButton(
                 icon: Icon(Icons.add),
                 onPressed: () => _startAddNewTransaction(context),
