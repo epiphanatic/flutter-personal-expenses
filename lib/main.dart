@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
         data: (brightness) => ThemeData(
             // difference between primarySwatch and primaryColor is former automatically creates
             //   different shades, whereas latter will just default to other things.
-            primaryColor: Colors.green,
+            // primaryColor: Colors.green,
+            primarySwatch: Colors.green,
             accentColor: Colors.amber,
             // errorColor: Colors.red,
             brightness: brightness,
@@ -107,12 +108,14 @@ class _MyHomePageState extends State<MyHomePage> {
     if (Theme.of(context).brightness == Brightness.dark) {
       DynamicTheme.of(context).setThemeData(ThemeData(
           brightness: Brightness.light,
-          primaryColor: Colors.green,
+          // primaryColor: Colors.green,
+          primarySwatch: Colors.green,
           accentColor: Colors.amber));
     } else {
       DynamicTheme.of(context).setThemeData(ThemeData(
           brightness: Brightness.dark,
-          primaryColor: Colors.green,
+          // primaryColor: Colors.green,
+          primarySwatch: Colors.green,
           accentColor: null));
     }
     // DynamicTheme.of(context).setBrightness(
