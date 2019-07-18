@@ -2,9 +2,15 @@
 
 A Flutter demo app to record personal expenses and see trends in spending over time via a chart.
 
+Features:
+1. Switch in real-time between light and dark mode - persists preference across app restarts.
+2. Responsive to landscape and portrait modes.
+3. When in landscape mode, can switch between showing chart or expenses list.
+4. Adaptive interface that changes buttons and toolbar depending on whether the user is on Android or IOS.
+
 ## Demo
 
-![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/demo1-low.gif?alt=media&token=cf0d290a-fcf3-41df-99d4-8ec1fd18c704)
+![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/expenses_portrait.gif?alt=media&token=2f2382d2-2123-4d80-aebf-5d7100657c97) ![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/expenses_landscape.gif?alt=media&token=25189a65-7de6-4e64-90dd-bb7ff35b57dc)
 
 ## Goolge Play Store
 
