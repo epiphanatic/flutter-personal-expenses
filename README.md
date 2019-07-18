@@ -11,6 +11,7 @@ Features:
 ## Demo
 
 ![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/expenses_portrait.gif?alt=media&token=2f2382d2-2123-4d80-aebf-5d7100657c97)
+
 ![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/expenses_landscape.gif?alt=media&token=25189a65-7de6-4e64-90dd-bb7ff35b57dc)
 
 ## Goolge Play Store
