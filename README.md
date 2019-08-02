@@ -10,9 +10,9 @@ Features:
 
 ## Demo
 
-![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/expenses_portrait.gif?alt=media&token=2f2382d2-2123-4d80-aebf-5d7100657c97)
+![Alt Text](https://firebasestorage.googleapis.com/v0/b/bounti-dev-34f18.appspot.com/o/github_and_other_demos%2Fexpenses_portrait.gif?alt=media&token=ea6270af-93e0-4579-89e5-fef3442a2bbb)
 
-![Alt Text](https://firebasestorage.googleapis.com/v0/b/portfolio-ba483.appspot.com/o/expenses_landscape.gif?alt=media&token=25189a65-7de6-4e64-90dd-bb7ff35b57dc)
+![Alt Text](https://firebasestorage.googleapis.com/v0/b/bounti-dev-34f18.appspot.com/o/github_and_other_demos%2Fexpenses_landscape.gif?alt=media&token=58a97677-aa32-4fb7-871f-6a9327d0221b)
 
 ## Goolge Play Store
 
