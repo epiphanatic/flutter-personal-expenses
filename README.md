@@ -14,10 +14,6 @@ Features:
 
 ![Alt Text](https://firebasestorage.googleapis.com/v0/b/bounti-dev-34f18.appspot.com/o/github_and_other_demos%2Fexpenses_landscape.gif?alt=media&token=58a97677-aa32-4fb7-871f-6a9327d0221b)
 
-## Goolge Play Store
-
-You can download the app from the playstore [here](https://play.google.com/store/apps/details?id=com.amnion.flutter_personal_expenses_demo).
-
 ## Code Dependencies
 
 If you wish to run this code on your local machine, Flutter needs to be installed.
